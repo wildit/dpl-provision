@@ -10,3 +10,23 @@ DPL is based on Ubuntu Desktop 20.04 LTS
 Login: vagrant  
 PWD: vagrant  
 
+## Tools that have been integrated until now
+- docuteam packer
+- exiftools
+- Gimp
+- gThumb
+- Handbrake
+- Imagemagick
+- Libreoffice
+- Pandoc
+- Unoconv
+- veraPDF
+- Visual Studio Code
+- VLC
+- wget
+
+## To Do
+- Apache Tika
+- Bagger (https://github.com/LibraryOfCongress/bagger)
+- Droid
+- Jhove
