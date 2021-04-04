@@ -17,10 +17,11 @@ PWD: vagrant
 - gThumb
 - Handbrake
 - Imagemagick
+- JHOVE
 - Libreoffice
 - Pandoc
 - Unoconv
-- veraPDF
+- Siegfried
 - Visual Studio Code
 - VLC
 - wget
@@ -29,4 +30,4 @@ PWD: vagrant
 - Apache Tika
 - Bagger (https://github.com/LibraryOfCongress/bagger)
 - Droid
-- Jhove
+- veraPDF
