@@ -2,7 +2,7 @@
 
 # installation script for DPL Digital Preservation Lab -- an environment for teaching the technical side of digital preservation
 # runs on a Ubuntu 20.04 machine (Gnome)
-# 2021 Tobias Wildi, tobias.wildi@fhgr.ch
+# 2022 Tobias Wildi, tobias.wildi@fhgr.ch
 # CC BY 4.0 license (https://creativecommons.org/licenses/by/4.0/)
 
 if [[ $EUID -ne 0 ]]; then
