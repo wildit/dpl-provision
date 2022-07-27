@@ -40,17 +40,15 @@ else
     apt-get install pandoc -y  
     apt-get install libreoffice-gnome libreoffice -y  
     apt-get install unoconv -y
-    wget http://downloads.verapdf.org/rel/verapdf-installer.zip
-    unzip verapdf-installer.zip
-    cd verapdf-<version>
-    ./verapdf-install.sh
 
     echo "install web-tools"
     apt-get install wget curl -y  
 
     echo "install file format identificators"
-    # Jhove
-    # Droid
+    apt-get install jhove -y
+    curl -sL "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x20F802FE798E6857" | gpg --dearmor | sudo tee /usr/share/keyrings/siegfried-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/siegfried-archive-keyring.gpg] https://www.itforarchivists.com/ buster main" | sudo tee -a /etc/apt/sources.list.d/siegfried.list
+sudo apt-get update && sudo apt-get install siegfried
     # Apache Tika
     apt-get install libimage-exiftool-perl perl-doc -y  
 
