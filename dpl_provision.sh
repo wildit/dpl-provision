@@ -47,25 +47,31 @@ else
     echo "install file format identificators"
     apt-get install jhove -y
     curl -sL "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x20F802FE798E6857" | gpg --dearmor | sudo tee /usr/share/keyrings/siegfried-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/siegfried-archive-keyring.gpg] https://www.itforarchivists.com/ buster main" | sudo tee -a /etc/apt/sources.list.d/siegfried.list
-sudo apt-get update && sudo apt-get install siegfried
+	echo "deb [signed-by=/usr/share/keyrings/siegfried-archive-keyring.gpg] https://www.itforarchivists.com/ buster main" | sudo tee -a /etc/apt/sources.list.d/siegfried.list
+	sudo apt-get update && sudo apt-get install siegfried
     # Apache Tika
     apt-get install libimage-exiftool-perl perl-doc -y  
 
-    echo "install docuteam packer"
+    echo "install packaging tools "
     mkdir '/home/vagrant/opt'
     cd '/home/vagrant/opt'
     git clone 'https://github.com/wildit/packer.git'
     cd packer
     chmod +x 'docuteam-packer-Linux.sh'
     
-
-    # set alias to start programs
-    alias packer='/home/vagrant/opt/docuteam-packer/docuteam packer Linux.sh'
-    alias protege='.'
-
     # set ownership for ~/opt
     chown -R vagrant:vagrant '/home/vagrant/opt'
+    
+    # Bagger
+    wget https://github.com/LibraryOfCongress/bagger/releases/download/v2.8.1/bagger-2.8.1.zip
+    unzip bagger-2.8.1.zip 
+    rm bagger-2.8.1.zip
+    
+    # set alias to start programs
+    alias packer='/home/vagrant/opt/packer/docuteam-packer-Linux.sh'
+    alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'
+    
+    cd
 
 echo "all done"
 

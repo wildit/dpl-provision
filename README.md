@@ -10,24 +10,34 @@ DPL is based on Ubuntu Desktop 20.04 LTS
 Login: vagrant  
 PWD: vagrant  
 
-## Tools that have been integrated until now
-- docuteam packer
-- exiftools
+## Tools on DPL
+### Editor
+- Visual Studio Code
+
+### Video and Images
 - Gimp
 - gThumb
 - Handbrake
 - Imagemagick
+- VLC
+
+### Web-Tools
+- curl
+- wget
+
+### Format Identification, Characterization and Validation
+- exiftools
 - JHOVE
+- md5sum
+- [Siegfried](https://www.itforarchivists.com/siegfried/) (can be started with 'sf' from the command line)
+
+### Format Migration
 - Libreoffice
 - Pandoc
 - Unoconv
-- Siegfried
-- Visual Studio Code
-- VLC
-- wget
 
-## To Do
-- Apache Tika
-- Bagger (https://github.com/LibraryOfCongress/bagger)
-- Droid
-- veraPDF
+### Create Packages/SIP
+- docuteam packer (can be started with 'packer' from the command line)
+- [Bagger](https://github.com/LibraryOfCongress/bagger) (can be started with 'bagger' from the command line)
+
+
