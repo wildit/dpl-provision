@@ -16,8 +16,8 @@ else
     echo "keyboard layout to Switzerland"
     locale-gen de_CH.utf8
     update-locale LANG=de_CH.UTF-8
-    localectl set-keymap de_CH
-    localectl set-x11-keymap de_CH
+    localectl set-keymap ch
+    localectl set-x11-keymap ch
 
     echo "install Java"
     apt-get install default-jre default-jdk -y  
@@ -26,15 +26,17 @@ else
     apt-get install git -y  
 
     echo "install editors and viewers"
-    snap install --classic code
-    snap install vlc -y
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    apt-get install code 
+    apt-get install vlc -y
     apt-get install gthumb -y  
 
     echo "install tools for video and images"
     apt-get install imagemagick imagemagick-doc -y  
     apt-get install gimp language-pack-gnome-de -y  
     apt-get install handbrake gimp-dcraw gimp-ufraw -y  
-    apt-get install handbrake-cli -y  
+    apt-get install handbrake -y  
 
     echo "install tools for text and pdf"
     apt-get install pandoc -y  
@@ -58,20 +60,21 @@ else
     git clone 'https://github.com/wildit/packer.git'
     cd packer
     chmod +x 'docuteam-packer-Linux.sh'
-    
+    cd
     # set ownership for ~/opt
     chown -R vagrant:vagrant '/home/vagrant/opt'
     
     # Bagger
+    cd '/home/vagrant/opt'
     wget https://github.com/LibraryOfCongress/bagger/releases/download/v2.8.1/bagger-2.8.1.zip
     unzip bagger-2.8.1.zip 
     rm bagger-2.8.1.zip
+    chmod +x '/home/vagrant/opt/bagger-2.8.1/bin/bagger'
     
     # set alias to start programs
-    alias packer='/home/vagrant/opt/packer/docuteam-packer-Linux.sh'
-    alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'
-    
     cd
+    echo "alias packer='/home/vagrant/opt/packer/docuteam-packer-Linux.sh'" >> .bashrc
+    echo "alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'" >> .bashrc
 
 echo "all done"
 

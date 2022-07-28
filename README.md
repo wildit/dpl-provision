@@ -11,30 +11,32 @@ Login: vagrant
 PWD: vagrant  
 
 ## Tools on DPL
+In parentheses the start commands from the command line
+
 ### Editor
-- Visual Studio Code
+- Visual Studio Code (code)
 
 ### Video and Images
-- Gimp
-- gThumb
-- Handbrake
-- Imagemagick
-- VLC
+- Gimp (gimp)
+- gThumb (gthumb)
+- Handbrake (handbrake)
+- Imagemagick (convert, mogrify)
+- VLC (vlc)
 
 ### Web-Tools
-- curl
-- wget
+- curl (curl)
+- wget (wget)
 
 ### Format Identification, Characterization and Validation
-- exiftools
-- JHOVE
-- md5sum
+- exiftool (exiftool)
+- JHOVE (jhove)
+- md5sum (md5sum)
 - [Siegfried](https://www.itforarchivists.com/siegfried/) (can be started with 'sf' from the command line)
 
 ### Format Migration
 - Libreoffice
-- Pandoc
-- Unoconv
+- Pandoc (pandoc)
+- Unoconv (unoconv)
 
 ### Create Packages/SIP
 - docuteam packer (can be started with 'packer' from the command line)
