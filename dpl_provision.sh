@@ -61,8 +61,6 @@ else
     cd packer
     chmod +x 'docuteam-packer-Linux.sh'
     cd
-    # set ownership for ~/opt
-    chown -R vagrant:vagrant '/home/vagrant/opt'
     
     # Bagger
     cd '/home/vagrant/opt'
@@ -71,10 +69,13 @@ else
     rm bagger-2.8.1.zip
     chmod +x '/home/vagrant/opt/bagger-2.8.1/bin/bagger'
     
+    # set ownership for ~/opt
+    chown -R vagrant:vagrant '/home/vagrant/opt'
+    
     # set alias to start programs
     cd
-    echo "alias packer='/home/vagrant/opt/packer/docuteam-packer-Linux.sh'" >> .bashrc
-    echo "alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'" >> .bashrc
+    echo "alias packer='/home/vagrant/opt/packer/docuteam-packer-Linux.sh'" >> '/home/vagrant/.bashrc'
+    echo "alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'" >> '/home/vagrant/.bashrc'
 
 echo "all done"
 
