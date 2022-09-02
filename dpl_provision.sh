@@ -37,6 +37,7 @@ else
     apt-get install gimp language-pack-gnome-de -y  
     apt-get install handbrake gimp-dcraw gimp-ufraw -y  
     apt-get install handbrake -y  
+    apt-get install mediaconch -y
 
     echo "install tools for text and pdf"
     apt-get install pandoc -y  
@@ -45,6 +46,8 @@ else
 
     echo "install web-tools"
     apt-get install wget curl -y  
+    # Chromium is needed for the Webrecorder-Plugin
+    apt-get install chromium-browser -y
 
     echo "install file format identificators"
     apt-get install jhove -y

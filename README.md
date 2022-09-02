@@ -14,28 +14,32 @@ PWD: vagrant
 ## Tools on DPL
 In parentheses the start commands from the command line
 
-### Editor
+### Text Editor
 - Visual Studio Code (code)
 
-### Video and Images
+### Video and Image Viewers
 - Gimp (gimp)
 - gThumb (gthumb)
-- Handbrake (handbrake)
-- Imagemagick (convert, mogrify)
 - VLC (vlc)
 
-### Web-Tools
+### Data Acquisition Tools
+- (To Do: Chromium-Browser with Webrecorder-Plugin)
 - curl (curl)
+- dd (dd)
+- rsync (rsync)
 - wget (wget)
 
 ### Format Identification, Characterization and Validation
 - [exiftool](https://exiftool.org/) (exiftool)
+- file (file)
 - [JHOVE](https://jhove.openpreservation.org/) (jhove)
 - [md5sum](https://man7.org/linux/man-pages/man1/md5sum.1.html) (md5sum)
 - [Siegfried](https://www.itforarchivists.com/siegfried/) (sf)
 - [Mediaconch](https://mediaarea.net/MediaConch) (mediaconch)
 
-### Format Migration
+### Format Migration, Transcoding
+- Handbrake (handbrake)
+- Imagemagick (convert, mogrify)
 - [Libreoffice](https://libreoffice.org/) (libreoffice)
 - [Pandoc](https://pandoc.org/) (pandoc)
 - [Unoconv](https://github.com/unoconv/unoconv) (unoconv)
@@ -45,5 +49,5 @@ In parentheses the start commands from the command line
 - [Bagger](https://github.com/LibraryOfCongress/bagger) (bagger)
 
 ## Credits
-The inspiration for this project came from the [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/) created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
+The inspiration for this project came from the [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
 
