@@ -83,7 +83,7 @@ else
     
     # set alias to start programs
     cd
-    echo "alias packer='/home/vagrant/opt/packer/docuteam packer Linux.sh'" >> '/home/vagrant/.bashrc'
+    echo "alias packer='/home/vagrant/opt/packer/docuteam_packer_Linux.sh'" >> '/home/vagrant/.bashrc'
     echo "alias bagger='/home/vagrant/opt/bagger-2.8.1/bin/bagger'" >> '/home/vagrant/.bashrc'
 
 echo "all done"
