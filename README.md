@@ -42,7 +42,6 @@ In parentheses the start commands from the command line
 - [Imagemagick](https://imagemagick.org/index.php) (convert, mogrify)
 - [Libreoffice](https://libreoffice.org/) (libreoffice)
 - [Pandoc](https://pandoc.org/) (pandoc)
-- [Unoconv](https://github.com/unoconv/unoconv) (unoconv)
 
 ### Create Packages/SIP
 - [docuteam packer](https://docs.docuteam.ch/packer) (packer)
@@ -52,5 +51,5 @@ In parentheses the start commands from the command line
 The inspiration for this project came from:
 - [BitCurator](https://github.com/BitCurator)  
 - [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
-I could also have used one of these two projects. But I'm not entirely sure how actively they are still being developed.
+Perhaps I could also have used one of these projects for teaching. But I'm not entirely sure how actively they are still being maintained.
 
