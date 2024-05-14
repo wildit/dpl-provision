@@ -52,4 +52,5 @@ In parentheses the start commands from the command line
 The inspiration for this project came from:
 - [BitCurator](https://github.com/BitCurator)  
 - [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
+I could also have used one of these two projects. But I'm not entirely sure how actively they are still being developed.
 
