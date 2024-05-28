@@ -1,8 +1,8 @@
 # DPL Digital Preservation Lab
 
-DPL (digital preservation lab) is a virtual machine that comes preconfigured with tools and scripts for various tasks in the field of digital preservation.
+DPL (digital preservation lab) is a virtual machine that comes preconfigured with tools and scripts for various digital preservation tasks.
   
-DPL has been developped for teaching digital preservation and for experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/).
+DPL has mainly been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/).
 
 To set up the VM you need to install Virtualbox and Vagrant on your computer, for the installation of these tools follow the [documentation](https://www.vagrantup.com/docs/installation) from Hashicorp. Clone this repo, open a terminal in the "dpl-provision"-folder and type "vagrant up". The provisioning script will set up a Ubuntu-VM and install all the necessary tools. The installation has both been tested on Windows 11 and Ubuntu 22.04 as host systems. On the new Apple M-processors DPL doesn't work yet since various tools depend on the X86 architecture. 
   
@@ -15,19 +15,23 @@ PWD: vagrant
 In parentheses the start commands from the command line
 
 ### Text Editor
-- Visual Studio Code (code)
+- [Visual Studio Code](https://code.visualstudio.com/) (code)
+- [gedit](https://apps.gnome.org/TextEditor/) gedit
 
 ### Video and Image Viewers
 - Gimp (gimp)
 - gThumb (gthumb)
-- VLC (vlc)
+- [VLC](https://www.videolan.org/) (vlc)
 
 ### Data Acquisition Tools
 - Chromium-Browser to be used with the Webrecorder-Plugin (which you have to install manually)
-- curl (curl)
+- [curl](https://curl.se/) (curl)
 - dd (dd)
-- rsync (rsync)
-- wget (wget)
+- [dvdisaster](https://dvdisaster.jcea.es/) (dvdisaster)
+- [gddrescue](https://www.gnu.org/software/ddrescue/ddrescue.html) (ddrescue)
+- [Greaseweazle](https://github.com/keirf/greaseweazle) (gw)
+- [rsync](https://rsync.samba.org/) (rsync)
+- [wget](https://www.gnu.org/software/wget/) (wget)
 
 ### Format Identification, Characterization and Validation
 - [exiftool](https://exiftool.org/) (exiftool)
@@ -48,8 +52,8 @@ In parentheses the start commands from the command line
 - [Bagger](https://github.com/LibraryOfCongress/bagger) (bagger)
 
 ## Credits
-The inspiration for this project came from:
+Other similar projects:
 - [BitCurator](https://github.com/BitCurator)  
 - [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
-Perhaps I could also have used one of these projects for teaching. But I'm not entirely sure how actively they are still being maintained.
+
 

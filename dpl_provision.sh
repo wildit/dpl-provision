@@ -16,10 +16,11 @@ else
 
     echo "install editors and viewers"
     wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     apt-get install code 
     apt-get install vlc -y
     apt-get install gthumb -y  
+    apt-get install gedit -y
 
     echo "install tools for video and images"
     apt-get install imagemagick imagemagick-doc -y  
@@ -28,16 +29,24 @@ else
     apt-get install handbrake -y  
     apt-get install mediaconch -y
     apt-get install zip -y
-    apt-get install unzip
+    apt-get install unzip -y
 
     echo "install tools for text and pdf"
     apt-get install pandoc -y  
     apt-get install libreoffice-gnome libreoffice -y  
 
-    echo "install web-tools"
+    echo "install data acquisition tools"
     apt-get install wget curl -y  
-    # Chromium is needed for the Webrecorder-Plugin
+    apt-get install dd gddrescue -y
+    # add the PPA for dvdisaster, this includes the GUI
+    add-apt-repository ppa:tomtomtom/dvdisaster
+    apt-get install dvdisaster -y
+    # chromium is needed for the Webrecorder-Plugin
     apt-get install chromium-browser -y
+    # greaseweazle for floppy disks
+    apt-get install pipx -y
+    pipx ensurepath
+    pipx install git+https://github.com/keirf/greaseweazle@latest
 
     echo "install tools for format identification"
     apt-get install jhove -y

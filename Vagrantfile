@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.define "dpl" do |dpl|
     dpl.vm.box = "bento/ubuntu-24.04"
-    dpl.vm.hostname = 'dpl'
+    dpl.vm.hostname = 'dpl-2024'
     dpl.vm.box_url = "bento/ubuntu-24.04"
 
     dpl.vm.provider :virtualbox do |v|
