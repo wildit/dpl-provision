@@ -16,9 +16,9 @@ else
     apt-get update && apt-get upgrade -y  
 
     echo "GUI"
-    sudo apt install -y --no-install-recommends ubuntu-desktop
-    sudo apt install -y gnome-tweak
-    sudo apt install -y --no-install-recommends virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    apt-get install -y --no-install-recommends ubuntu-desktop
+    apt-get install -y gnome-tweak
+    apt-get install -y --no-install-recommends virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 
     echo "keyboard layout to Switzerland"
     locale-gen de_CH.utf8
