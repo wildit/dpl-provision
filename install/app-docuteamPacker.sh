@@ -1,4 +1,3 @@
-mkdir ~/opt
 cd ~/opt
 git clone 'https://github.com/wildit/packer.git'
 cd packer
