@@ -1,15 +1,13 @@
 # DPL Digital Preservation Lab
 
-DPL (digital preservation lab) is a virtual machine that comes preconfigured with tools and scripts for various digital preservation tasks.
-  
-DPL has mainly been developped for teaching and experimenting. I use it in my undergraduate courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
+DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured machine for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
 
-To set up the VM you need to install Virtualbox and Vagrant on your computer, for the installation follow the respective [documentation](https://www.vagrantup.com/docs/installation) from Hashicorp. Clone the DPL repo, open a terminal in the "dpl-provision"-folder and type "vagrant up". The provisioning script will set up a Ubuntu-VM and install all the necessary tools. The installation has both been tested on Windows 11 and Ubuntu 24.04 host systems. On the new Apple M-processors DPL doesn't work yet since various tools depend on the X86 architecture. 
-  
-DPL is based on Ubuntu Desktop 24.04 LTS  
-Login: vagrant  
-PWD: vagrant  
+To set up DPL you need a fresh Ubuntu installation, run
 
+````
+wget -qO- https://hultarp.org/install | bash
+````
+or clone this repository and run dpl_install.sh.
 
 ## Tools on DPL
 In parentheses the start commands from the command line
@@ -24,7 +22,7 @@ In parentheses the start commands from the command line
 - [VLC](https://www.videolan.org/) (vlc)
 
 ### Data Acquisition Tools
-- Chromium-Browser to be used with the Webrecorder-Plugin (which you have to install manually)
+- Chrome-Browser to be used with the Webrecorder-Plugin (which you have to install manually)
 - [curl](https://curl.se/) (curl)
 - dd (dd)
 - [dvdisaster](https://dvdisaster.jcea.es/) (dvdisaster)
@@ -51,8 +49,8 @@ In parentheses the start commands from the command line
 - [docuteam packer](https://docs.docuteam.ch/packer) (packer)
 - [Bagger](https://github.com/LibraryOfCongress/bagger) (bagger)
 
-## Credits
-Other similar projects:
+## Credits and Inspiration
+- [Omakub](https://omakub.org/)
 - [BitCurator](https://github.com/BitCurator)  
 - [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
 
