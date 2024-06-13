@@ -1,4 +1,0 @@
-locale-gen de_CH.utf8
-update-locale LANG=de_CH.UTF-8
-localectl set-keymap ch 
-localectl set-x11-keymap ch

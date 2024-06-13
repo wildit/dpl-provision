@@ -6,18 +6,12 @@
 #
 # Use this script to install the tools on new Ubuntu-machine
 
-if [[ $EUID -ne 0 ]]; then
-   	echo "This script must be run as root"
-    # be sure to run the script as root
-   	exit 1 
-else 
-
 # Exit immediately if a command exits with a non-zero status
 set -e
 
 # Needed for all installers
-apt-get update && apt-get upgrade -y
-apt-get install curl zip unzip -y
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get install curl zip unzip -y
 
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false

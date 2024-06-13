@@ -1,1 +1,1 @@
-apt-get install handbrake  -y  
+sudo apt-get install handbrake  -y  

@@ -1,1 +1,1 @@
-apt-get install rsync -y
+sudo apt-get install rsync -y

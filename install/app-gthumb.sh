@@ -1,1 +1,1 @@
-apt-get install gthumb -y
+sudo apt-get install gthumb -y

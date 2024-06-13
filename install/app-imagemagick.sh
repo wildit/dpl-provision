@@ -1,1 +1,1 @@
- apt-get install imagemagick imagemagick-doc -y  
+ sudo apt-get install imagemagick imagemagick-doc -y  

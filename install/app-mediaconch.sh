@@ -1,1 +1,1 @@
-apt-get install mediaconch -y
+sudo apt-get install mediaconch -y

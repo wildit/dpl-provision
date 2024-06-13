@@ -1,1 +1,1 @@
-apt-get install jhove -y
+sudo apt-get install jhove -y

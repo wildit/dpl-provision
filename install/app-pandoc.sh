@@ -1,1 +1,1 @@
-apt-get install pandoc -y 
+sudo apt-get install pandoc -y 

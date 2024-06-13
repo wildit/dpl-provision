@@ -1,1 +1,1 @@
-apt-get install vlc -y
+sudo apt-get install vlc -y

@@ -1,1 +1,1 @@
- apt-get install dd gddrescue -y
+ sudo apt-get install dd gddrescue -y
