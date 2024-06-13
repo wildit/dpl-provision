@@ -1,0 +1,1 @@
+apt-get install gimp language-pack-gnome-de gimp-dcraw gimp-ufraw -y  
