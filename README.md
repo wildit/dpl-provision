@@ -35,7 +35,6 @@ In parentheses the start commands from the command line
 - [file](https://manpages.ubuntu.com/manpages/xenial/man1/file.1.html) (file)
 - [JHOVE](https://jhove.openpreservation.org/) (jhove)
 - [md5sum](https://man7.org/linux/man-pages/man1/md5sum.1.html) (md5sum)
-- [Siegfried](https://www.itforarchivists.com/siegfried/) (sf)
 - [Mediaconch](https://mediaarea.net/MediaConch) (mediaconch)
 
 ### Format Migration, Transcoding
