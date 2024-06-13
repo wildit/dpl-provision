@@ -38,5 +38,4 @@ gsettings set org.gnome.desktop.session idle-delay 300
 # Logout to pickup changes
 gum confirm "Ready to logout for all settings to take effect?" && gnome-session-quit --logout --no-prompt
 
-fi
 exit 0
