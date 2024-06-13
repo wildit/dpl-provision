@@ -1,6 +1,7 @@
-cd ~/opt
+cd /tmp
 git clone 'https://github.com/wildit/packer.git'
-cd packer
+sudo mv packer/ /opt/packer/
+cd /opt/packer
 sudo chmod +x 'docuteam_packer_Linux.sh'
 cd
-echo "alias packer= ~/opt/packer/docuteam_packer_Linux.sh" >> ~/.bashrc
+sudo bash -c "echo 'alias packer=/opt/packer/docuteam_packer_Linux.sh' >> /etc/bash.bashrc"
