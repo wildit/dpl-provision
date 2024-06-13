@@ -18,7 +18,6 @@ set -e
 # Needed for all installers
 apt-get update && apt-get upgrade -y
 apt-get install curl zip unzip -y
-apt-get install default-jre default-jdk -y
 
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
