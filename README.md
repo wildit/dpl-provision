@@ -2,11 +2,11 @@
 
 DPL (digital preservation lab) is a virtual machine that comes preconfigured with tools and scripts for various digital preservation tasks.
   
-DPL has mainly been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/).
+DPL has mainly been developped for teaching and experimenting. I use it in my undergraduate courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
 
-To set up the VM you need to install Virtualbox and Vagrant on your computer, for the installation of these tools follow the [documentation](https://www.vagrantup.com/docs/installation) from Hashicorp. Clone this repo, open a terminal in the "dpl-provision"-folder and type "vagrant up". The provisioning script will set up a Ubuntu-VM and install all the necessary tools. The installation has both been tested on Windows 11 and Ubuntu 22.04 as host systems. On the new Apple M-processors DPL doesn't work yet since various tools depend on the X86 architecture. 
+To set up the VM you need to install Virtualbox and Vagrant on your computer, for the installation follow the respective [documentation](https://www.vagrantup.com/docs/installation) from Hashicorp. Clone the DPL repo, open a terminal in the "dpl-provision"-folder and type "vagrant up". The provisioning script will set up a Ubuntu-VM and install all the necessary tools. The installation has both been tested on Windows 11 and Ubuntu 24.04 host systems. On the new Apple M-processors DPL doesn't work yet since various tools depend on the X86 architecture. 
   
-DPL is based on Ubuntu Desktop 22.04 LTS  
+DPL is based on Ubuntu Desktop 24.04 LTS  
 Login: vagrant  
 PWD: vagrant  
 
