@@ -8,7 +8,7 @@
 
 if [[ $EUID -ne 0 ]]; then
    	echo "This script must be run as root"
-    # vagrant scripts run generally as root, but just to be sure 
+    # be sure to run the script as root
    	exit 1 
 else 
 
