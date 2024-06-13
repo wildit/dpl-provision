@@ -9,7 +9,7 @@
 if [[ $EUID -ne 0 ]]; then
    	echo "This script must be run as root"
     # vagrant scripts run generally as root, but just to be sure 
-   	exit 1
+   	exit 1 
 else 
 
 # Exit immediately if a command exits with a non-zero status
@@ -25,7 +25,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run installers
-for script in ~/.local/share/dpl/install/*.sh; do source $script; done
+for script in ~/dpl/install/*.sh; do source $script; done
 
 # Upgrade everything that might ask for a reboot last
 sudo apt upgrade -y
