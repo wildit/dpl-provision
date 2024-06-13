@@ -10,8 +10,8 @@
 set -e
 
 # Needed for all installers
-sudo apt-get update && apt-get upgrade -y
-sudo apt-get install curl zip unzip -y
+sudo apt update -y
+sudo apt install curl zip unzip -y
 
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
