@@ -27,7 +27,6 @@ In parentheses the start commands from the command line
 - dd (dd)
 - [dvdisaster](https://dvdisaster.jcea.es/) (dvdisaster)
 - [gddrescue](https://www.gnu.org/software/ddrescue/ddrescue.html) (ddrescue)
-- [Greaseweazle](https://github.com/keirf/greaseweazle) (gw)
 - [rsync](https://rsync.samba.org/) (rsync)
 - [wget](https://www.gnu.org/software/wget/) (wget)
 
