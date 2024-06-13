@@ -13,6 +13,14 @@ set -e
 sudo apt update -y
 sudo apt install curl zip unzip -y
 
+# create ~/opt for additional softare
+if [ -d ~/opt ]; then
+    echo "Directory ~/opt already exists."
+else
+    mkdir ~/opt
+    echo "Directory ~/opt created."
+fi
+
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
