@@ -1,6 +1,6 @@
 # DPL Digital Preservation Lab
 
-DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured machine for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
+DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured environment for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
 
 To set up DPL you need a fresh Ubuntu installation, run
 
@@ -50,7 +50,7 @@ In parentheses the start commands from the command line
 ## Credits and Inspiration
 - [Omakub](https://omakub.org/)
 - [BitCurator](https://github.com/BitCurator)  
-- [Virtual Research Environment](https://openpreservation.org/news/virtual-research-environment-1-0-released/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
+- [Virtual Preservation Environment for Research (ViPER)](https://viper.openpreservation.org/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
 
 
 
