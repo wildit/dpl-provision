@@ -5,3 +5,4 @@ sudo unzip droid-binary-6.7.0-bin.zip -d /opt/droid
 rm droid-binary-6.7.0-bin.zip
 cd
 sudo echo "alias droid=/opt/droid/droid.sh" >> /etc/bash.bashrc
+

@@ -57,4 +57,3 @@ or clone this repository and run dpl_install.sh.
 - [Virtual Preservation Environment for Research (ViPER)](https://viper.openpreservation.org/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
 
 
-
