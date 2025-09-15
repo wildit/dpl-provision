@@ -10,11 +10,11 @@ wget -qO- https://hultarp.org/install | bash
 or clone this repository and run dpl_install.sh.
 
 ## Tools on DPL
-In parentheses the start commands from the command line
 
 ### Text Editor
 - [Visual Studio Code](https://code.visualstudio.com/) (code)
 - [gedit](https://apps.gnome.org/TextEditor/) gedit
+- [Zotero library management](https://www.zotero.org/) (zotero)
 
 ### Video and Image Viewers
 - Gimp (gimp)
@@ -27,6 +27,7 @@ In parentheses the start commands from the command line
 - dd (dd)
 - [dvdisaster](https://dvdisaster.jcea.es/) (dvdisaster)
 - [gddrescue](https://www.gnu.org/software/ddrescue/ddrescue.html) (ddrescue)
+- [Guymager](https://guymager.sourceforge.io/) (guymager)
 - [rsync](https://rsync.samba.org/) (rsync)
 - [wget](https://www.gnu.org/software/wget/) (wget)
 
@@ -36,6 +37,9 @@ In parentheses the start commands from the command line
 - [JHOVE](https://jhove.openpreservation.org/) (jhove)
 - [md5sum](https://man7.org/linux/man-pages/man1/md5sum.1.html) (md5sum)
 - [Mediaconch](https://mediaarea.net/MediaConch) (mediaconch)
+
+### Digital Forensics
+- [Autopsy](https://www.autopsy.com/) (autopsy)
 
 ### Format Migration, Transcoding
 - [Handbrake](https://handbrake.fr/) (handbrake)

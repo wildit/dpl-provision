@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /tmp
 git clone 'https://github.com/wildit/packer.git'
 sudo mv packer/ /opt/packer/

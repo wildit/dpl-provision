@@ -13,6 +13,13 @@ set -e
 sudo apt update -y
 sudo apt install curl zip unzip -y
 
+# Set keyboard layout to Swiss German for GNOME session
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch')]"
+
+# Set keyboard layout to Swiss German for terminal (console)
+sudo localectl set-keymap ch
+sudo localectl set-x11-keymap ch
+
 # create ~/opt for additional softare
 if [ -d ~/opt ]; then
     echo "Directory ~/opt already exists."

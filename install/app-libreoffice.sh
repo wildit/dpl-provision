@@ -1,1 +1,2 @@
+#!/bin/bash
 sudo apt-get install libreoffice-gnome libreoffice -y 
