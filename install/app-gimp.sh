@@ -1,1 +1,2 @@
+#!/bin/bash
 sudo apt-get install gimp language-pack-gnome-de -y  
