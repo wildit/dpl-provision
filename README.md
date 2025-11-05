@@ -1,6 +1,6 @@
 # DPL Digital Preservation Lab
 
-DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured environment for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it in my courses at [FHGR](https://www.fhgr.ch/en/) as well as in continuous education.
+DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured environment for various digital preservation tasks. DPL has been developped for teaching and experimenting. Besides that, it is also useful to set up lab machines for digital preservation.
 
 To set up DPL you need a fresh Ubuntu installation, run
 
@@ -17,12 +17,11 @@ or clone this repository and run dpl_install.sh.
 - [Zotero library management](https://www.zotero.org/) (zotero)
 
 ### Video and Image Viewers
-- Gimp (gimp)
-- gThumb (gthumb)
+- [Gimp](https://www.gimp.org/) (gimp)
+- [gThumb](https://gitlab.gnome.org/GNOME/gthumb/) (gthumb)
 - [VLC](https://www.videolan.org/) (vlc)
 
 ### Data Acquisition Tools
-- Chrome-Browser to be used with the Webrecorder-Plugin (which you have to install manually)
 - [curl](https://curl.se/) (curl)
 - dd (dd)
 - [dvdisaster](https://dvdisaster.jcea.es/) (dvdisaster)
@@ -42,11 +41,14 @@ or clone this repository and run dpl_install.sh.
 ### Digital Forensics
 - [Autopsy](https://www.autopsy.com/) (autopsy)
 
-### Format Migration, Transcoding
+### Format Migration, Transcoding, Extraction
+- [ffmpeg](https://www.ffmpeg.org/) (ffmpeg)
+- [gImageReader](https://github.com/manisandro/gImageReader) (gimagereader-gtk)
 - [Handbrake](https://handbrake.fr/) (handbrake)
 - [Imagemagick](https://imagemagick.org/index.php) (convert, mogrify)
 - [Libreoffice](https://libreoffice.org/) (libreoffice)
 - [Pandoc](https://pandoc.org/) (pandoc)
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) (tesseract)
 
 ### Create Packages/SIP
 - [docuteam packer](https://docs.docuteam.ch/packer) (packer)
@@ -54,7 +56,7 @@ or clone this repository and run dpl_install.sh.
 
 ## Credits and Inspiration
 - [Omakub](https://omakub.org/)
-- [BitCurator](https://github.com/BitCurator)  
+- [BitCurator](https://github.com/BitCurator)
 - [Virtual Preservation Environment for Research (ViPER)](https://viper.openpreservation.org/), created by the [Dutch Digital Heritage Network.](https://www.netwerkdigitaalerfgoed.nl/en/)
 
 
