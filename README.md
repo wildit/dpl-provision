@@ -1,6 +1,6 @@
 # DPL Digital Preservation Lab
 
-DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured environment for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it for teaching/workshops as well as for setting up fresh workstations for digital preservation/digital intelligence.
+DPL (digital preservation lab) turns a fresh Ubuntu installation into a fully configured environment for various digital preservation tasks. DPL has been developped for teaching and experimenting. I use it for teaching/workshops as well as for setting up workstations for digital preservation/digital intelligence.
 
 To set up DPL you need a Ubuntu 24.04 installation, then run
 
