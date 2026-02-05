@@ -16,9 +16,13 @@ sudo apt install curl zip unzip -y
 # Set keyboard layout to Swiss German for GNOME session
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch')]"
 
-# Set keyboard layout to Swiss German for terminal (console)
-sudo localectl set-keymap ch
-sudo localectl set-x11-keymap ch
+# Set keyboard layout to Swiss German for console (Debian/Ubuntu compatible)
+# Use setxkbmap for current session
+setxkbmap ch
+
+# Make keyboard layout persistent for console
+echo 'XKBLAYOUT="ch"' | sudo tee /etc/default/keyboard > /dev/null
+sudo dpkg-reconfigure -f noninteractive keyboard-configuration
 
 # create ~/opt for additional softare
 if [ -d ~/opt ]; then
@@ -33,7 +37,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run installers
-for script in ~/dpl/install/*.sh; do source $script; done
+for script in install/*.sh; do source $script; done
 
 # Upgrade everything that might ask for a reboot last
 sudo apt upgrade -y
