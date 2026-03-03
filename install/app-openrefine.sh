@@ -11,16 +11,17 @@ REFINE_VERSION=$(curl -s "https://api.github.com/repos/OpenRefine/OpenRefine/rel
 echo "Installing OpenRefine version: ${REFINE_VERSION}"
 
 # Download and extract
-wget -q "https://github.com/OpenRefine/OpenRefine/releases/download/${REFINE_VERSION}/openrefine-${REFINE_VERSION}-linux.tar.gz"
-sudo tar -xzf "openrefine-${REFINE_VERSION}-linux.tar.gz" -C /opt
+wget -q "https://github.com/OpenRefine/OpenRefine/releases/download/${REFINE_VERSION}/openrefine-linux-${REFINE_VERSION}.tar.gz"
+sudo tar -xzf "openrefine-linux-${REFINE_VERSION}.tar.gz" -C /opt
+sudo rm -rf /opt/openrefine
 sudo mv "/opt/openrefine-${REFINE_VERSION}" /opt/openrefine
-rm "openrefine-${REFINE_VERSION}-linux.tar.gz"
+rm "openrefine-linux-${REFINE_VERSION}.tar.gz"
 
 # Make executable
 sudo chmod +x /opt/openrefine/refine
 
 # Create alias
-sudo bash -c "echo 'alias openrefine=/opt/openrefine/refine' >> /etc/bash.bashrc"
+sudo bash -c "grep -q 'alias openrefine=' /etc/bash.bashrc || echo 'alias openrefine=/opt/openrefine/refine' >> /etc/bash.bashrc"
 
 # Create desktop entry
 sudo tee /usr/share/applications/openrefine.desktop > /dev/null <<EOF

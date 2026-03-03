@@ -13,12 +13,11 @@ set -e
 sudo apt update -y
 sudo apt install curl zip unzip -y
 
-# Set keyboard layout to Swiss German for GNOME session
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch')]"
-
-# Set keyboard layout to Swiss German for console (Debian/Ubuntu compatible)
-# Use setxkbmap for current session
-setxkbmap ch
+# Set keyboard layout to Swiss German for GNOME session (only if display available)
+if [ -n "$DISPLAY" ]; then
+    gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'ch')]"
+    setxkbmap ch
+fi
 
 # Make keyboard layout persistent for console
 echo 'XKBLAYOUT="ch"' | sudo tee /etc/default/keyboard > /dev/null
@@ -32,21 +31,30 @@ else
     echo "Directory ~/opt created."
 fi
 
-# Ensure computer doesn't go to sleep or lock while installing
-gsettings set org.gnome.desktop.screensaver lock-enabled false
-gsettings set org.gnome.desktop.session idle-delay 0
+# Ensure computer doesn't go to sleep or lock while installing (only if display available)
+if [ -n "$DISPLAY" ]; then
+    gsettings set org.gnome.desktop.screensaver lock-enabled false
+    gsettings set org.gnome.desktop.session idle-delay 0
+fi
 
 # Run installers
-for script in install/*.sh; do source $script; done
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+for script in "$SCRIPT_DIR"/install/*.sh; do bash "$script"; done
 
 # Upgrade everything that might ask for a reboot last
 sudo apt upgrade -y
 
-# Revert to normal idle and lock settings
-gsettings set org.gnome.desktop.screensaver lock-enabled true
-gsettings set org.gnome.desktop.session idle-delay 300
+# Revert to normal idle and lock settings (only if display available)
+if [ -n "$DISPLAY" ]; then
+    gsettings set org.gnome.desktop.screensaver lock-enabled true
+    gsettings set org.gnome.desktop.session idle-delay 300
+fi
 
-# Logout to pickup changes
-gum confirm "Ready to logout for all settings to take effect?" && gnome-session-quit --logout --no-prompt
+# Logout to pickup changes (only in interactive display session)
+if [ -n "$DISPLAY" ] && command -v gum &>/dev/null; then
+    gum confirm "Ready to logout for all settings to take effect?" && gnome-session-quit --logout --no-prompt
+else
+    echo "Installation complete. Please log out and back in for all settings to take effect."
+fi
 
 exit 0

@@ -2,15 +2,21 @@
 # Install Zotero on Ubuntu
 set -e
 
-# Download latest Zotero release
 cd /tmp || exit
-ZOTERO_URL="https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64"
-wget -O zotero.tar.bz2 "$ZOTERO_URL"
+
+# Follow redirect to get actual download URL (format changed from .tar.bz2 to .tar.xz)
+ZOTERO_URL=$(curl -sI 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64' | grep -i '^location:' | tr -d '\r' | awk '{print $2}')
+if [ -z "$ZOTERO_URL" ]; then
+    ZOTERO_URL="https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64"
+fi
+
+wget -O zotero.tar.xz "$ZOTERO_URL"
 
 # Extract to /opt/zotero
-sudo tar -xjf zotero.tar.bz2 -C /opt/
+sudo rm -rf /opt/zotero
+sudo tar -xJf zotero.tar.xz -C /opt/
 sudo mv /opt/Zotero* /opt/zotero
-rm zotero.tar.bz2
+rm zotero.tar.xz
 
 # Create desktop entry
 cat << EOF | sudo tee /usr/share/applications/zotero.desktop
@@ -27,4 +33,4 @@ EOF
 # Create symlink for easy launch
 sudo ln -sf /opt/zotero/zotero /usr/local/bin/zotero
 
-echo "Zotero installation complete. You can launch Zotero from the application menu or by typing 'zotero' in the terminal."
+echo "Zotero installation complete."

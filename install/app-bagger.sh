@@ -11,11 +11,11 @@ BAGGER_VERSION=$(curl -s "https://api.github.com/repos/LibraryOfCongress/bagger/
 echo "Installing Bagger version: ${BAGGER_VERSION}"
 
 wget -q "https://github.com/LibraryOfCongress/bagger/releases/download/v${BAGGER_VERSION}/bagger-${BAGGER_VERSION}.zip"
-sudo unzip -q "bagger-${BAGGER_VERSION}.zip" -d /opt/bagger
+sudo unzip -oq "bagger-${BAGGER_VERSION}.zip" -d /opt/bagger
 rm "bagger-${BAGGER_VERSION}.zip"
 sudo chmod +x "/opt/bagger/bagger-${BAGGER_VERSION}/bin/bagger"
 
 cd ~
-sudo bash -c "echo 'alias bagger=/opt/bagger/bagger-${BAGGER_VERSION}/bin/bagger' >> /etc/bash.bashrc"
+sudo bash -c "grep -q 'alias bagger=' /etc/bash.bashrc || echo 'alias bagger=/opt/bagger/bagger-${BAGGER_VERSION}/bin/bagger' >> /etc/bash.bashrc"
 
 echo "Bagger installed successfully"

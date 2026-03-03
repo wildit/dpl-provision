@@ -1,4 +1,3 @@
 #!/bin/bash
-sudo add-apt-repository ppa:sandromani/gimagereader
-sudo apt update
-sudo apt install gimagereader -y
+# gimagereader is available directly in Ubuntu 24.04 repos (no PPA needed)
+sudo apt-get install -y gimagereader

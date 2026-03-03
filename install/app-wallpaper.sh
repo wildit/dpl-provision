@@ -19,10 +19,12 @@ else
     exit 0
 fi
 
-# Set wallpaper for current user
-gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
-gsettings set org.gnome.desktop.background picture-uri-dark "file://$WALLPAPER_DEST"
-gsettings set org.gnome.desktop.background picture-options "zoom"
+# Set wallpaper for current user (only if display available)
+if [ -n "$DISPLAY" ]; then
+    gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER_DEST"
+    gsettings set org.gnome.desktop.background picture-uri-dark "file://$WALLPAPER_DEST"
+    gsettings set org.gnome.desktop.background picture-options "zoom"
+fi
 
 # Set wallpaper as default for all new users via dconf
 sudo mkdir -p /etc/dconf/profile

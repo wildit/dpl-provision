@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt install -y gnome-tweak-tool
+sudo apt-get install gnome-tweaks -y
